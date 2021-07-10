@@ -14,7 +14,7 @@ class MainViewController: UIViewController, CollectionViewControllerDelegate {
     
     func minItemSize(forCellIn collectionView: UICollectionView, at indexPath: IndexPath) -> CGSize? { return nil }
     func collectionView(_ collectionView: UICollectionView, insetForSectionAt section: Int) -> UIEdgeInsets? { return nil }
-    
+
     @IBOutlet weak var sidePanelConstraint: NSLayoutConstraint?
     var collectionViewController: CollectionViewController!
     

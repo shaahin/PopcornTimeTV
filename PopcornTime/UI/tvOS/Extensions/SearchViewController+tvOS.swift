@@ -12,7 +12,6 @@ extension SearchViewController {
         
         collectionViewController.delegate = self
         collectionViewController.paginated = false
-
         searchController = UISearchController(searchResultsController: collectionViewController)
         searchController.hidesNavigationBarDuringPresentation = false
         if #available(tvOS 9.1, *) {

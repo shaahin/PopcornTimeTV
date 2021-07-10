@@ -78,15 +78,39 @@ class SearchViewController: MainViewController, UISearchBarDelegate {
         switch fetchType {
         case .movies:
             PopcornKit.loadMovies(searchTerm: text) {arg1,arg2 in
-                completion(arg1, arg2)
+
+                if let arg1 = arg1, arg1.count < 3 {
+
+                    completion(arg1 + arg1 + arg1 + arg1, arg2)
+
+                } else {
+
+                    completion(arg1, arg2)
+                }
             }
         case .shows:
             PopcornKit.loadShows(searchTerm: text) {arg1,arg2 in
-                completion(arg1, arg2)
+
+                if let arg1 = arg1, arg1.count < 3 {
+
+                    completion(arg1 + arg1 + arg1 + arg1, arg2)
+
+                } else {
+
+                    completion(arg1, arg2)
+                }
             }
         case .people:
             TraktManager.shared.search( forPerson: text) {arg1,arg2 in
-                completion(arg1 as! [Crew], arg2)
+
+                if let arg1 = arg1, arg1.count < 3 {
+
+                    completion((arg1 + arg1 + arg1 + arg1) as! [Crew], arg2)
+
+                } else {
+
+                    completion(arg1 as! [Crew], arg2)
+                }
             }
         default:
             return

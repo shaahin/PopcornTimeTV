@@ -52,7 +52,7 @@ DEPENDENCIES:
   - XCDYouTubeKit (~> 2.8.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/CocoaPods/Specs:
     - 1PasswordExtension
     - Alamofire
     - AlamofireImage
@@ -109,4 +109,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 576356af21d50656749768b82a4a28a2452d72dd
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.10.1
